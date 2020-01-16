@@ -1,3 +1,4 @@
+// SET
 // kind of like an array, but no duplicate items
 // the values are not in any paticular order
 // typically used simply check for the presence of an item

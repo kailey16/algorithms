@@ -1,5 +1,5 @@
+// STACK
 // function: push, pop, peek, length
-
 
 // ex1) Palindrome
 var letters = []

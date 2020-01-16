@@ -1,3 +1,4 @@
+// QUEUE
 // way to hold data
 // similar to stack(FILO), but queue(FIFO)
 // you can use array for queue
