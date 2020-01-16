@@ -1,13 +1,13 @@
 // is the string has all unique characters?
-// 1. for example: "apple" - false, "search" - true
+// for example: "apple" - false, "search" - true
 
 function isUnique(string) {
-  const characters = []
+  const characters = {}
   for (let i = 0; i < string.length; i++) {
-    if (characters.includes(string[i])) {
+    if (characters[string[i]]) {
       return false
     }
-    characters.push(string[i])
+    characters[string[i]] = true
   }
   return true
 }
