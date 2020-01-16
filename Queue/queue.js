@@ -2,7 +2,7 @@
 // similar to stack(FILO), but queue(FIFO)
 // you can use array for queue
 
-fuction Queue() {
+function Queue() {
   collection = []
   this.print = function() {
     console.log(collection)
@@ -38,7 +38,7 @@ q.print()
 
 // Priority Queue
 // not only pass the element into the queue, but also the priority of the queue
-fuction PriorityQueue() {
+function PriorityQueue() {
   var collection = []
   this.printCollection = function() {
     console.log(collection)
