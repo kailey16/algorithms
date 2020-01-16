@@ -11,3 +11,5 @@ function isUnique(string) {
   }
   return true
 }
+
+// O(n)
