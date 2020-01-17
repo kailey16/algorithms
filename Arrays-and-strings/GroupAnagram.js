@@ -11,6 +11,7 @@
 
 // go through each string and sort it and group together
 
+// Solution O(n)
 var groupAnagrams = function(strs) {
   let groups = {};
   for (let i = 0; i < strs.length; i++) {

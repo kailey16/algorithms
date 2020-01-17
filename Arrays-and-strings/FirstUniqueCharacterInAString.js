@@ -6,6 +6,7 @@
 // s = "loveleetcode",
 // return 2.
 
+// Solution O(n)
 var firstUniqChar = function(s) {
   let chars = {}
   for (let i = 0; i < s.length; i++) {
