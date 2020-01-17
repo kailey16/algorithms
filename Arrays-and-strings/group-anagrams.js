@@ -22,9 +22,10 @@ var groupAnagrams = function(strs) {
       }
   }
   
-  let groupsArray = [];
-  for (let key in groups) {
-      groupsArray.push(groups[key])
-  }
-  return groupsArray
+//   let groupsArray = [];
+//   for (let key in groups) {
+//       groupsArray.push(groups[key])
+//   }
+//   return groupsArray
+    return Object.values(groups)
 };
