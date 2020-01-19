@@ -3,21 +3,24 @@
 // function: push, pop, peek, length
 
 // ex1) Palindrome
-var letters = []
-var word = "racecar"
-var rword = ""
+function Palindrome?() {
+  var letters = []
+  var word = "racecar"
+  var rword = ""
 
-for (var i = 0; i < word.length; i++) {
-  letters.push(word[i])
+  for (var i = 0; i < word.length; i++) {
+    letters.push(word[i])
+  }
+
+  for (var i = 0; i < word.length; i++) {
+    rword += letters.pop()
+  }
+
+  if (rword === word) {
+    return true
+  } else { return false }
 }
 
-for (var i = 0; i < word.length; i++) {
-  rword += letters.pop()
-}
-
-if (rword === word) {
-  return true
-} else { return false }
 
 
 // creat a stack
