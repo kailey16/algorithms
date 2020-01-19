@@ -3,7 +3,7 @@
 // function: push, pop, peek, length
 
 // ex1) Palindrome
-function Palindrome?() {
+function Palindrome() {
   var letters = []
   var word = "racecar"
   var rword = ""
