@@ -4,7 +4,7 @@
 
 // Note: The length of temperatures will be in the range [1, 30000]. Each temperature will be an integer in the range [30, 100].
 
-// Solution 
+// Solution with array - not a good solution!!!
 var dailyTemperatures = function(T) {
     
   let output = [];
@@ -24,7 +24,7 @@ var dailyTemperatures = function(T) {
 };
 
 
-// Solution O(n)
+// Solution O(n) - with Stack
 var dailyTemperatures = function(T) {
   let arr = new Array(T.length).fill(0);
     
