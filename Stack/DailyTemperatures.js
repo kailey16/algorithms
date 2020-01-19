@@ -22,3 +22,21 @@ var dailyTemperatures = function(T) {
   
   return output
 };
+
+
+// Solution O(n)
+var dailyTemperatures = function(T) {
+  let arr = new Array(T.length).fill(0);
+    
+  // stack is holding the index of the hottest days
+  let stack = [];
+  for (let i = 0; i < T.length; i++) {
+      
+      while (stack.length > 0 && T[i] > T[stack[stack.length-1]]) {
+          let index = stack.pop();
+          arr[index] = i - index;
+      }
+      stack.push(i);
+  }
+  return arr;
+};
