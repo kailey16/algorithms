@@ -1,4 +1,5 @@
 // STACK
+// Last in First out
 // function: push, pop, peek, length
 
 // ex1) Palindrome
