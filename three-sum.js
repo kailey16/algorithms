@@ -12,12 +12,28 @@
 // ]
 
 var threeSum = function(nums) {
-    for (let i = 0; i < nums.length; i++) {
-      let sets = {};
-      for (let j = i + 1; j < nums.length; j++) {
-        let sumForTwo = nums[i] + nums[j]
-        
+  if (nums.lenght === 0) {return []}
+  nums.sort((a, b) => a - b)
+  let result = []
+  for (let i = 0; i < nums.length - 2; i++) {
+    if (nums[i] > 0) {return result}
+    let j = i + 1
+    let k = nums.length - 1
+    if (i > 0 && nums[i] === nums[i-1]) continue;
+    while (j < k) {
+      let sum = nums[i] + nums[j] + nums[k]
+      if (sum < 0) {
+        j++;
+      } else if (sum > 0) {
+        k--;
+      } else {
+        result.push([nums[i], nums[j], nums[k]])
+        while (nums[j] === nums[j+1]) j++;
+        while (nums[k] === nums[k-1]) k--;
+        j++;
+        k--;
       }
     }
-    
+  }
+  return result
 };
