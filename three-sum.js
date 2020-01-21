@@ -11,7 +11,7 @@
 //   [-1, -1, 2]
 // ]
 
-// Solution O(n)
+// Solution O(n^2)
 var threeSum = function(nums) {
   if (nums.lenght === 0) {return []}
   nums.sort((a, b) => a - b)
