@@ -94,6 +94,9 @@ let MinHeap = function() {
 
 };
 
+
+
+
 let MaxHeap = function() {
 	
 	let heap = [null];

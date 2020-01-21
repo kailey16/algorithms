@@ -4,6 +4,7 @@
 // Input: nums = [1,1,1,2,2,3], k = 2
 // Output: [1,2]
 
+// Solution O(n)
 var topKFrequent = function(nums, k) {
   let sets = {}
   for (let i = 0; i < nums.length; i++) {
