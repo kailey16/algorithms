@@ -23,7 +23,7 @@ var getSum = function(a, b) {
   
   while(b) {
       carry = a & b;
-      a ^= b;
+      a ^= b; // a = a ^ b
       b = carry << 1;
   }
   
