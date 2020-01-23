@@ -29,3 +29,16 @@ A closure is the combination of a function bundled together (enclosed) with refe
 DOM stands for Document Object Model and is responsible for how various objects in a document interact with each other. 
 
 5. var vs let vs const
+  1) const
+    - the variable can’t be reassigned
+    - object can have properties mutated
+  2) let
+    - block scoped
+    - cannot be re-declared in the same scope
+    - the variable may be reassigned, such as a counter in a loop, or a value swap in an algorithm
+    - the variable will be used only in the block it’s defined in
+  3) var
+    - function scoped
+    - can be re-declared in the same scope
+    - the variable may or may not be reassigned
+    - the variable may or may not be used for an entire function, or just for the purpose of a block or loop
