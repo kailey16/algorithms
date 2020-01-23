@@ -17,7 +17,7 @@ var getSum = function(a, b) {
   return total
 }
 
-// with binarr application
+// with binary application
 var getSum = function(a, b) {
   let carry;
   

@@ -28,6 +28,4 @@ A closure is the combination of a function bundled together (enclosed) with refe
 4. What is dom?
 DOM stands for Document Object Model and is responsible for how various objects in a document interact with each other. 
 
-
-/// Practices to do
-1. build a click counter with React
+5. var vs let vs const
