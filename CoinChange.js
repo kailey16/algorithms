@@ -26,3 +26,38 @@ var coinChange = function(coins, amount) {
     }
     return dp[amount] > amount ? -1 : dp[amount]
 }
+
+
+// top to bottom approach
+var coinChange = function(coins, amount) {
+    if (amount < 1) { return 0 }
+    let dpArr = new Array(amount+1)
+    
+    function coinChangeSub(coins, remainder, dp) {
+        if (remainder < 0) { return -1 }
+        if (remainder === 0) { return 0 }
+        
+        let minimum = remainder + 1;
+        for (let i = 0; i < coins.length; i++) {
+            let changeResult = coinChangeSub(coins, remainder - coins[i], dp)
+            /*
+            If making change was possible (changeResult >= 0) and 
+            the change result beats our present minimum, add one to
+            that smallest value
+
+            We accept that coin as the last coin in our change making
+            sequence up to this point since it minimizes the coins we
+            need
+            */
+            if (changeResult >= 0 && changeResult < minimum) {
+                minimum = changeResult + 1
+            }
+        }
+        
+        dp[remainder-1] = (minimum === remainder + 1) ? -1 : minimum
+        
+        return dp[remainder-1]
+    }
+    
+    return coinChangeSub(coins, amount, dpArr)
+}
