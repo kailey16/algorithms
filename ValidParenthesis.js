@@ -9,27 +9,24 @@
 
 var isValid = function(string) {
   const characters = {
-    "{": "}",
-    "[": "]",
-    "(": ")"
+  "{": "}",
+  "[": "]",
+  "(": ")"
   }
+  const lefts = ["{", "[", "("]
   const l = string.length
 
-  if (l % 2 !== 0) {
-    return false
-  } else if (string[l-1] === characters[string[0]]) {
-    if (l > 2) {
-      for (i=1; i < l/2; i++) {
-        return string[l-1-i] === characters[string[i]] ? true : false
+  if (l % 2 !== 0) { return false }
+  
+  let stack = []
+  for (let i = 0; i < l; i++) {
+      if (lefts.includes(string[i])) {
+          stack.push(string[i])
+      } else {
+          if (string[i] !== characters[stack.pop()]) {
+              return false
+          }
       }
-    }
-    return true
-  } else if (string[1] === characters[string[0]]) {
-    if (l > 2) {
-      for (i=2; i < l-1; i += 2) {
-        return string[i+1] === characters[string[i]] ? true : false
-      }
-    }
-    return true
-  } else { return false }
+  }
+  return stack.length === 0 ? true : false
 };

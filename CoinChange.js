@@ -5,6 +5,9 @@
 // Output: 3 
 // Explanation: 11 = 5 + 5 + 1
 
+
+// NOT A WORKING SOLUTION!!!!
+
 // coins = [1, 2, 5], amount 11
 var coinChange = function(coins, amount) {
   coins.sort((a,b) => b-a) // [5, 2, 1]
