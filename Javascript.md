@@ -20,9 +20,23 @@
 
 3. What is a closure?
 A closure is a function that has access to its outer function scope even after the outer function has returned
-  - A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+  - This means a closure can remember and access variables and arguments of its outer function even after the function has finished
+  - closures are created every time a function is created, at function creation time.
   - To use a closure, define a function inside another function and expose it. To expose a function, return it or pass it to another function.
   - Among other things, closures are commonly used to `give objects data privacy`
+
+```javascript
+  function getCounter() {
+    let counter = 0;
+    return function() {
+      return counter++;
+    }
+  }
+  let count = getCounter();
+  console.log(count());  // 0
+  console.log(count());  // 1
+  console.log(count());  // 2
+  ```
 
 4. What is dom?
 DOM stands for Document Object Model and is responsible for how various objects in a document interact with each other. 
