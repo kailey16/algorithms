@@ -9,7 +9,7 @@
 2. two paradigms
   1) OOP (Object-Oriented Programming)
     - Prototypal Inheritance (objects without classes, and prototype delegation, aka OLOO — Objects Linking to Other Objects)
-    - instances inherit directly from other objects. Instances are typically instantiated via factory functions or `Object.create()`. Instances may be composed from many different objects, allowing for easy selective inheritance.
+    - `instances inherit directly from other objects`. Instances are typically instantiated via factory functions or Object.create(). Instances may be composed from many different objects, allowing for easy selective inheritance.
     - In JavaScript, prototypal inheritance is simpler & more flexible than class inheritance
   2) Functional Programming (enabled by lambdas with closure)
     - Functional programming produces programs by composing mathematical functions and avoids shared state & mutable data
@@ -19,7 +19,7 @@
       > They are the simplest reusable building blocks of code in a program.
 
 3. What is a closure?
-A closure is a function that has access to its outer function scope even after the outer function has returned
+`A closure is a function that has access to its outer function scope even after the outer function has returned`
   - This means a closure can remember and access variables and arguments of its outer function even after the function has finished
   - closures are created every time a function is created, at function creation time.
   - To use a closure, define a function inside another function and expose it. To expose a function, return it or pass it to another function.
