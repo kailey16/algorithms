@@ -34,30 +34,26 @@ var countPrimes = function(n) {
 
 
 var countPrimes = function(n) {
-  if(n <= 2) return 0;
+  if (n <= 2) return 0;
   
   // first create an array with the same length of n filled with all 'true's
-  let arr = []
-  for(let i = 0; i < n; i++) {
-      arr.push(true)
-  }
+  let arr = new Array(n).fill(true)
   
-  // implement the Sieve of Eratosthenes algo here (link is provided below)
+  // implement the Sieve of Eratosthenes algorithm
   // at each iteration, if an element is true (which initially they all are), flip all the multiples of that number to false
-  
-  for(let i = 2;  i <= Math.floor(Math.sqrt(n)); i++) {
-      if(arr[i]) {
-          for(let j = i; j * i < arr.length; j++ ) {
+ for (let i = 2;  i * i <= n; i++) {
+      if (arr[i]) {
+          for (let j = i; j * i < n; j++) {
               arr[i * j] = false
           }
       }
   }
   
   // only count the remaining elements that are still true
-  
   let counter = 0;    
-  for(let i = 2; i < arr.length; i ++) {
-     if(arr[i]) counter ++
+  for (let i = 2; i < arr.length; i++) {
+     if (arr[i]) { counter++ }
   }
+  
 return counter
 };
