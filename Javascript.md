@@ -15,8 +15,16 @@
     - Functional programming produces programs by composing mathematical functions and avoids shared state & mutable data
     - pure function?
       > Pure functions take some input and return some output based on that input. Given the same input, will always return the same output.
-      > Produces no side effects.
       > They are the simplest reusable building blocks of code in a program.
+      > Produces no side effects.
+      > Side effects can be:
+          - Modifying any external variable or object property
+          - Logging data to the console
+          - Writing Data to a file
+          - Writing data to the network
+          - Triggering any external process
+          - Calling any other functions with side-effects
+          - Making Asynchronous Data Calls
 
 3. What is a closure?
 `A closure is a function that has access to its outer function scope even after the outer function has returned`
@@ -43,7 +51,7 @@ DOM stands for Document Object Model and is responsible for how various objects 
 
 5. var vs let vs const
   1) const
-    - the variable can’t be reassigned
+    - the variable can’t be reassigned or re-declared
     - object can have properties mutated
   2) let
     - block scoped
