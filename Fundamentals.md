@@ -26,9 +26,9 @@
           - Calling any other functions with side-effects
           - Making Asynchronous Data Calls
     - pure components in React
-      > Pure components are the simplest and fastest components which can be written. They can replace any component which only has a render(). These components enhance the simplicity of the code and performance of the application.
-      > Pure Component is the compoent which renders the same output for the same state and props value. React provides the PureComponent base class for these class components.
-      > It is the same as Component except that Pure Components take care of `shouldComponentUpdate` by itself, it does the shallow comparison on the state and props data. If the previous state and props data is the same as the next props or state, the component is not Re-rendered.
+      > Pure components are the simplest and fastest components. They can replace any component which only has a render(). These components enhance the simplicity of the code and performance of the application.
+      > Pure Component is the component which renders the same output for the same state and props value.
+      > React provides the PureComponent base class for these class components as `React.PureComponent`. It is the same as Component except that Pure Components take care of `shouldComponentUpdate` by itself, it does the shallow comparison on the state and props data. If the previous state and props data is the same as the next props or state, the component is not Re-rendered.
 
 3. What is a closure?
 `A closure is a function that has access to its outer function scope even after the outer function has returned`
@@ -68,6 +68,7 @@ DOM stands for Document Object Model and is responsible for how various objects 
     - the variable may or may not be reassigned
     - the variable may or may not be used for an entire function, or just for the purpose of a block or loop
 
+
 6. Truth Tables and Logic
   1) AND
     1 AND 1 gives 1. Any other input gives 0.
@@ -81,3 +82,8 @@ DOM stands for Document Object Model and is responsible for how various objects 
     Equal inputs give 0. Non equal inputs give 1.
   6) NOT
     Invert input bits. 0 becomes 1. 1 becomes 0.
+
+
+7. Stateful vs Stateless application
+  - Stateless application doesn’t read or store data. It simply processes the code and other content hosted on it.
+  - Stateful applications, on the other hand, require backing storage that protects data during the service restarts.
