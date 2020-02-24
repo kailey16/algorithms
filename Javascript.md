@@ -25,6 +25,10 @@
           - Triggering any external process
           - Calling any other functions with side-effects
           - Making Asynchronous Data Calls
+    - pure components in React
+      > Pure components are the simplest and fastest components which can be written. They can replace any component which only has a render(). These components enhance the simplicity of the code and performance of the application.
+      > Pure Component is the compoent which renders the same output for the same state and props value. React provides the PureComponent base class for these class components.
+      > It is the same as Component except that Pure Components take care of `shouldComponentUpdate` by itself, it does the shallow comparison on the state and props data. If the previous state and props data is the same as the next props or state, the component is not Re-rendered.
 
 3. What is a closure?
 `A closure is a function that has access to its outer function scope even after the outer function has returned`
@@ -63,3 +67,17 @@ DOM stands for Document Object Model and is responsible for how various objects 
     - can be re-declared in the same scope
     - the variable may or may not be reassigned
     - the variable may or may not be used for an entire function, or just for the purpose of a block or loop
+
+6. Truth Tables and Logic
+  1) AND
+    1 AND 1 gives 1. Any other input gives 0.
+  2) NAND(NOT AND)
+    1 AND 1 gives 0. Any other input gives 1.
+  3) OR
+    0 OR 0 gives 0. Any other input gives 1.
+  4) NOR(NOT OR)
+    0 OR 0 gives 1. Any other input gives 0.
+  5) XOR
+    Equal inputs give 0. Non equal inputs give 1.
+  6) NOT
+    Invert input bits. 0 becomes 1. 1 becomes 0.
