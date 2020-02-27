@@ -13,5 +13,4 @@ var deleteNode = function(nodeVal) {
     }
     previousNode.next = currentNode.next
   }
-  length--;
 }

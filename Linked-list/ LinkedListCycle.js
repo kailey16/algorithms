@@ -6,7 +6,7 @@
 var hasCycle = function(head) {
   let current = head
   let visited = new Set()
-  while (current != null) {
+  while (current !== null) {
       if (visited.has(current)) {
           return true
       } else {

@@ -16,7 +16,7 @@ var topKFrequent = function(nums, k) {
   }
   
   var setsToArr = []
-  for (var key in sets) {
+  for (const key in sets) {
       setsToArr.push([key, sets[key]])
   }
   
