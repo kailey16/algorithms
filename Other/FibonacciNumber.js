@@ -6,17 +6,15 @@ const fib = function(N) {
 }
 
 
-const fib = function(N) {
-  const sequence = {}
+var fib = function(N) {
+  const memo = {}
   if (N == 0) return 0
   
-  const addTwoBefore = N => {
-    if (N <= 2) { return 1 }
-    if (!(N in sequence)) {
-      sequence[N] = addTwoBefore(N-1) + addTwoBefore(N-2)
-    return sequence[N]
-    }
+  const rec = n => {
+      if (n <= 2) { return 1 }
+      if (!(n in memo)) { return memo[n] = rec(n-1) + rec(n-2) }
+      return memo[n]
   }
-  
-  return addTwoBefore(N)
+
+  return rec(N)
 };
