@@ -19,3 +19,12 @@ function alphabetPosition(text) {
   
   return result.join(" ")
 }
+
+
+function alphabetPosition(text) {
+  return text
+    .toUpperCase()
+    .match(/[a-z]/gi)  // i -> case insensitive
+    .map( (c) => c.charCodeAt() - 64)  // str.charCodeAt(index)
+    .join(' ');
+}
