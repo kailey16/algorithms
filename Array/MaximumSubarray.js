@@ -40,7 +40,7 @@ var maxSubArray = function(nums) {
   let maxSum = nums[0]
   let runningTotal = nums[0]
   
-  for (let i = 0; i < nums.length; i++) {
+  for (let i = 1; i < nums.length; i++) {
 
     if (runningTotal + nums[i] > nums[i]) {
         runningTotal += nums[i];
