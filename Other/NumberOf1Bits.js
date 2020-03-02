@@ -13,12 +13,14 @@ var hammingWeight = function(n) {
 };
 
 
+// Solutions using bitwise operators
 
 var hammingWeight = function(n) {
   let count = 0;
   while (n !== 0) {
       count++;
       n &= n - 1;
+      // n = n & n-1 (bitwise AND assignment operator) 
   }
   return count;
 };
