@@ -13,21 +13,19 @@ var countPrimes = function(n) {
           count++
       }
   }
+  return count
   
   function isprime(num) {
-      let factors = []
-      for (let i = 1; i < num + 1; i++) {
-          if (num % i == 0) {
-              factors.push(i)
-          }
-      }
-      
-      if (factors.length == 2) {
-          return true
-      } else { return false }
+    if (num === 1) return false
+    if (num === 2) return true
+
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+            return false
+        }
+    }
+    return true
   }
-  
-  return count
 };
 
 
