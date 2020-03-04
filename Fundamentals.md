@@ -6,6 +6,7 @@
     - First-class functions: Functions in JavaScript are utilized as first class objects. This usually means that these functions can be passed as arguments to other functions, returned as values from other functions, assigned to variables or can also be stored in data structures.
     - Nested functions: The functions, which are defined inside other functions, are called Nested functions. They are called 'everytime' the main function is invoked.
 
+
 2. two paradigms
   1) OOP (Object-Oriented Programming)
     - Prototypal Inheritance (objects without classes, and prototype delegation, aka OLOO — Objects Linking to Other Objects)
@@ -30,6 +31,7 @@
       > Pure Component is the component which renders the same output for the same state and props value.
       > React provides the PureComponent base class for these class components as `React.PureComponent`. It is the same as Component except that Pure Components take care of `shouldComponentUpdate` by itself, it does the shallow comparison on the state and props data. If the previous state and props data is the same as the next props or state, the component is not Re-rendered.
 
+
 3. What is a closure?
 `A closure is a function that has access to its outer function scope even after the outer function has returned`
   - This means a closure can remember and access variables and arguments of its outer function even after the function has finished
@@ -50,8 +52,10 @@
   console.log(count());  // 2
   ```
 
+
 4. What is dom?
 DOM stands for Document Object Model and is responsible for how various objects in a document interact with each other. 
+
 
 5. var vs let vs const
   1) const
@@ -87,3 +91,47 @@ DOM stands for Document Object Model and is responsible for how various objects 
 7. Stateful vs Stateless application
   - Stateless application doesn’t read or store data. It simply processes the code and other content hosted on it.
   - Stateful applications, on the other hand, require backing storage that protects data during the service restarts.
+
+
+8. Callback function
+  - A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+  - Note, however, that callbacks are often used to continue code execution after an asynchronous operation has completed — these are called asynchronous callbacks. A good example is the callback functions executed inside a .then() block chained onto the end of a promise after that promise fulfills or rejects. This structure is used in many modern web APIs, such as fetch().
+
+
+9. Promise
+  - The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.
+   - A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.
+  - A Promise is in one of these states:
+      * pending: initial state, neither fulfilled nor rejected.
+      * fulfilled: meaning that the operation completed successfully.
+      * rejected: meaning that the operation failed.
+ 
+ 
+10. async/await
+  1) async
+    ```javascript
+    async function f() {
+      return 1;
+    }
+    f().then(alert)
+    ```
+    The word “async” before a function means one simple thing: a function always returns a promise. Other values are wrapped in a resolved promise automatically.
+    So, async ensures that the function returns a promise, and wraps non-promises in it
+  2) await
+    ```javascript
+    async function f() {
+      let promise = new Promise((resolve, reject) => {
+        setTimeout(() => resolve("done!"), 1000)
+      });
+      let result = await promise; // wait until the promise resolves
+      alert(result); // "done!"
+    }
+    ```
+    The keyword await makes JavaScript wait until that promise settles and returns its result. It works only inside async functions.
+    ```javascript
+    async function showAvatar() {
+      let response = await fetch('/article/promise-chaining/user.json');
+      let user = await response.json();
+      return user;
+    }
+    ```
