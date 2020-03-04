@@ -1,13 +1,10 @@
-1. What is function?
-  A function is a process which takes some input, called arguments, and produces some output called a return value. Functions may serve the following purposes:
-    - Mapping: Produce some output based on given inputs. A function maps input values to output values.
-    - Procedures: A function may be called to perform a sequence of steps. The sequence is known as a procedure, and programming in this style is known as procedural programming.
-    
-    - First-class functions: Functions in JavaScript are utilized as first class objects. This usually means that these functions can be passed as arguments to other functions, returned as values from other functions, assigned to variables or can also be stored in data structures.
-    - Nested functions: The functions, which are defined inside other functions, are called Nested functions. They are called 'everytime' the main function is invoked.
+* Object-oriented programming (OOP)
+  - Programming paradigm based on the concept of "objects". Objects can contain data in the form of attributes or properties and code n the form of procedures(methods).
+  - A feature of objects is an object's procedures that can access and often modify the data fields of the object with which they are associated (objects have a notion of "this" or "self").
+  - In OOP, computer programs are designed by making them out of objects that interact with one another.
+  - OOP languages are diverse, but the most popular ones are class-based, meaning that objects are instances of classes, which also determine their types.
 
-
-2. two paradigms
+1. two paradigms of Javascript
   1) OOP (Object-Oriented Programming)
     - Prototypal Inheritance (objects without classes, and prototype delegation, aka OLOO — Objects Linking to Other Objects)
     - `instances inherit directly from other objects`. Instances are typically instantiated via factory functions or Object.create(). Instances may be composed from many different objects, allowing for easy selective inheritance.
@@ -30,6 +27,15 @@
       > Pure components are the simplest and fastest components. They can replace any component which only has a render(). These components enhance the simplicity of the code and performance of the application.
       > Pure Component is the component which renders the same output for the same state and props value.
       > React provides the PureComponent base class for these class components as `React.PureComponent`. It is the same as Component except that Pure Components take care of `shouldComponentUpdate` by itself, it does the shallow comparison on the state and props data. If the previous state and props data is the same as the next props or state, the component is not Re-rendered.
+
+
+2. What is function?
+  A function is a process which takes some input, called arguments, and produces some output called a return value. Functions may serve the following purposes:
+    - Mapping: Produce some output based on given inputs. A function maps input values to output values.
+    - Procedures: A function may be called to perform a sequence of steps. The sequence is known as a procedure, and programming in this style is known as procedural programming.
+    
+    - First-class functions: Functions in JavaScript are utilized as first class objects. This usually means that these functions can be passed as arguments to other functions, returned as values from other functions, assigned to variables or can also be stored in data structures.
+    - Nested functions: The functions, which are defined inside other functions, are called Nested functions. They are called 'everytime' the main function is invoked.
 
 
 3. What is a closure?
@@ -135,3 +141,25 @@ DOM stands for Document Object Model and is responsible for how various objects 
       return user;
     }
     ```
+
+11. primitive data type
+  - data that is not an object and has no methods.
+  - There are 7 primitive data types: string, number, bigint, boolean, null, undefined, and symbol.
+  - All primitives are immutable, they cannot be altered
+  - non primitive data type is object
+
+
+12. relational database vs non-relational database
+  1) relational database (SQL database)
+    - The data is stored in tables containing rows (which represents an entry) and columns (which stores and sorts a specific type of information). Relationships are established through Primary and Foreign keys.
+    - Use Structured Query Language (SQL).
+    - Advantages:
+      Can handle lots of complex queries, database transactions, and routine analysis of data.
+      ACID(Atomity, Consistency, Isolation, Durability): Set of properties that ensure reliable database transactions.
+    - Disadvantages:
+      Cannot store complex or very large images, numbers, designs and multimedia products.
+      Can become very costly with maintenance and new servers.
+  2) non-relational database (noSQL database)
+    - does not incorporate the table model, instead data can be stored in a single document file
+    - much more flexible than relational database
+    - more like file folders, assembling related information of all types
