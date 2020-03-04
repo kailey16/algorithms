@@ -1,3 +1,4 @@
+// O(2^n)
 const fib = function(N) {
   if (N === 0) { return 0 }
   if (N === 1) { return 1 }
@@ -5,6 +6,16 @@ const fib = function(N) {
   return fib(N-1) + fib(N-2)
 }
 
+
+// O(2n)
+function fibonacci(num, memo) {
+  memo = memo || {};
+
+  if (memo[num]) return memo[num];
+  if (num <= 1) return 1;
+
+  return memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo);
+}
 
 var fib = function(N) {
   const memo = {}
@@ -18,3 +29,18 @@ var fib = function(N) {
 
   return rec(N)
 };
+
+
+// O(n)
+function fibonacci(num){
+  var a = 1, b = 0, temp;
+
+  while (num >= 0){
+    temp = a;
+    a = a + b;
+    b = temp;
+    num--;
+  }
+
+  return b;
+}
